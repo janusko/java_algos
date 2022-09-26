@@ -8,8 +8,11 @@ class UtilClass {
     }
 
     printMessages(messages) {
-        for(let i = 0; i < messages.length; i++) {
-            console.log(messages[i])
+        // for(let i = 0; i < messages.length; i++) {
+        //     console.log(messages[i])
+        // }
+        for(const msg of messages) {
+            console.log(msg);
         }
     }
 }
