@@ -64,7 +64,9 @@ class SLL {
    * @returns {any} The data from the removed node.
    */
     removeHead() {
+        if(!this.head) return this;
         this.head = this.head.next;
+        return this;
         // reassign the head
     }
 
