@@ -51,8 +51,8 @@ class SLL {
                 if (runner.next.next != null) {
                     runner = runner.next;
                 } else {
-                    console.log(runner.data);
-                    // return this;
+                    // console.log(runner.data);
+                    return runner.data;
                 }
             }
         }
@@ -70,33 +70,29 @@ class SLL {
         // prev, curr
         // level 1 : remove a middle node
         // level 2: remove the node if it is tail
-        // level 3: remove the node if it is head 
-        removeData(data) {
-            //HINT: The list is constructed by connecting nodes with pointers
-            // Play with the pointers so that you can remove that node from the list. 
-            let runner = this.head
-            let pointer = runner
+        // level 3: remove the node if it is head
+        //HINT: The list is constructed by connecting nodes with pointers
+        // Play with the pointers so that you can remove that node from the list. 
+        let runner = this.head
+        let pointer = runner
 
-            if (!this.head) return null;
-            if (this.head.data === data) {
-                this.head = this.head.next;
-                return
+        if (!this.head) return null;
+        if (this.head.data === data) {
+            this.head = this.head.next;
+            return
+        }
+        while (runner) {
+            if (runner.data === data) {
+                pointer.next = runner.next
+                return this
             }
-            while (runner) {
-                if (runner.data === data) {
-                    pointer.next = runner.next
-                    return this
-                }
-                else {
-                    pointer = runner
-                    runner = runner.next
-                }
+            else {
+                pointer = runner
+                runner = runner.next
             }
         }
-
-
-
     }
+}
 
 
 var list1 = new SLL();
@@ -110,10 +106,10 @@ list2.insertAtBack(9);
 //       HEAD
 // list2: (1) --> (2) --> (3) --> null
 
-// console.log(list2.secondToLast());
+console.log(list2.secondToLast());
 
 
 // list2.printList();
 
-list2.removeData(7)
+// list2.removeData(7)
 
