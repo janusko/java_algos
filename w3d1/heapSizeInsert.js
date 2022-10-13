@@ -95,5 +95,6 @@ heap.insert(10);
 heap.insert(3);
 heap.insert(12);
 heap.insert(1);
-console.log(heap.size());
-console.log(heap.top());
+// console.log(heap.size());
+// console.log(heap.top());
+console.log(heap.extract());
