@@ -129,3 +129,23 @@ emptyList.insertAtFront(2);
 emptyList.insertAtBack(10);
 emptyList.insertAtBack(25);
 console.log(emptyList.toArray());
+
+
+
+
+
+if(this.head) {
+    let newNode = new ListNode(newVal);
+    let runner = this.head;
+    while(runner.next && runner.next.data != targetVal) {
+        runner = runner.next
+    }
+    newNode.prev = runner.next;
+    newNode.next = runner.next.next;
+    if(newNode.next == null) {
+        this.tail = newNode;
+    }
+} else {
+    this.head = newNode;
+}
+return this;
