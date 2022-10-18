@@ -38,6 +38,9 @@ class Stack {
         if (this.top == null) {
             this.top = newNode;
         } else {
+            // newNode.next = this.top;
+            // this.top= newNode;
+            // return this.top.data;
             let temp = this.top;
             this.top = newNode;
             this.top.next = temp;
