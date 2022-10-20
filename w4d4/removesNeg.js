@@ -59,18 +59,6 @@ and the empty methods below the constructor.
      * @returns {SinglyLinkedList} This list.
      */
     reverse() {
-        // if (!this.head) {
-        //     return undefined;
-        // }
-        // let runner = this.head;
-        // while(runner != null) {
-        //     let temp = runner.next;
-        //     runner.next = runner.next.next;
-        //     runner.next.next = temp;
-        //     temp.next = runner;
-        // }
-        // this.head = runner.next;
-        // runner.next = null;
         let prev = null;
         let curr = this.head;
 
